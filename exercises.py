@@ -36,7 +36,7 @@ mostrar_secuencia(secuencia)
 archivo = open("Secuencia.txt", "a")
 for valor in secuencia:
 #Grabar un archivo 
-    archivo.write(str(valor))
+    archivo.write(str(valor) + "\n")
     archivo.close
 #leer el archivo
 archivo = open("Secuencia.txt", "r")
