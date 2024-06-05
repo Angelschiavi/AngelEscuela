@@ -1,2 +1,0 @@
-c = "Hola"
-c = "mundo"
