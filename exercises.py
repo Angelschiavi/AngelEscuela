@@ -21,7 +21,18 @@ def mostrar_secuencia(s):
     for iterado in s:
         print(iterado)
     return
-
+def archivo():
+    archivo = open("Secuencia.txt", "a")
+    for valor in secuencia:
+    #Grabar un archivo 
+        archivo.write(str(valor) + "\n")
+        archivo.close
+    #leer el archivo
+    archivo = open("Secuencia.txt", "r")
+    contenido = ( archivo.readline() )
+    print(contenido)
+    archivo.close()
+    return archivo
 
 
 valor_inicial = ingresar("Ingrese el valor inicial: ")
@@ -31,15 +42,5 @@ salto = ingresar("ingresar salto: ")
 secuencia = range(valor_inicial, valor_final, salto)
 print(secuencia)
 mostrar_secuencia(secuencia)
+archivo()
 
-
-archivo = open("Secuencia.txt", "a")
-for valor in secuencia:
-#Grabar un archivo 
-    archivo.write(str(valor) + "\n")
-    archivo.close
-#leer el archivo
-archivo = open("Secuencia.txt", "r")
-contenido = ( archivo.readline() )
-print(contenido)
-archivo.close()
